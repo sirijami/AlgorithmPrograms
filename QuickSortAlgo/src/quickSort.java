@@ -7,7 +7,9 @@ public class quickSort {
 		quickSort qs = new quickSort();
 		qs.sort(arr,0, arr.length-1);
 		printArray(arr);
-        System.out.println("The third largest element in the array is " + arr[2]);
+		System.out.println("The third largest number is " + arr[arr.length -3]);
+
+
 	}
 
 	private void sort(int arr[], int low, int high) {
@@ -20,8 +22,6 @@ public class quickSort {
 	
 	private int wall(int arr[], int low, int high) {
 		int pivot = arr[high];
-		System.out.println();
-		System.out.println(" Current pivot element " + pivot);
 		int i = low - 1;
 		for( int j = low ; j < high ; j++){
 			if(arr[j] < pivot){
