@@ -112,8 +112,6 @@ public class BitManipulation {
 		 /*Incomplete */
 		 return 0;
 	}
-	/* mul by a number. In which is power of 2 */
-	
 	
 	
 	
