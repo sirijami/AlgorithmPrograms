@@ -1,0 +1,20 @@
+
+public class BitManipulation {
+
+	public static void main(String[] args) {
+		System.out.println(isBitSet(2, 2));
+
+	}
+	private static boolean isBitSet(int num, int pos){
+		int mask = 1 << pos;
+		if((mask & num) == 0){
+			return false;
+		}
+		return true;		
+	}
+	private static int setBitPos(int num, int pos){
+		int mask = 1 << pos;
+		return mask | num;		
+	}
+
+}

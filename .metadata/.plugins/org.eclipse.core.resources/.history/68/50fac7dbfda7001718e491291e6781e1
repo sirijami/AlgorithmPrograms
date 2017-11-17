@@ -1,0 +1,25 @@
+package leetCodeAlgoEasy;
+
+public class missingPostiveNumber {
+
+	public static void main(String[] args) {
+		int[] arr= {1000,-1};
+		System.out.println(firstMissingPositive(arr));
+		
+
+	}
+	 public static int firstMissingPositive(int[] nums) {
+	        if(nums.length < 1){
+	            return 1;
+	        }
+	        Arrays.sort(nums);
+	        int start = nums[0];
+	        for(int i = start ; i < nums.length ; i++){
+	            if(nums[i] != i){
+	                return i;
+	            }
+	        }
+	        return nums.length;
+	    }
+
+}

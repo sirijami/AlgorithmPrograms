@@ -14,7 +14,7 @@ import javax.swing.text.html.HTMLDocument.Iterator;
 public class numbersDisappeared {
 
 	public static void main(String[] args) {
-		int[] array = {1,1};
+		int[] array = {1,35};
 		findDisappearedNumbers(array);
 	}
 	

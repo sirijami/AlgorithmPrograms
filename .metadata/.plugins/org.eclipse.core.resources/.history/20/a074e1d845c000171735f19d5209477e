@@ -1,0 +1,35 @@
+public class BinaryTree {
+	Node root;
+	public static void main(String[] args)
+    {
+        BinaryTree tree = new BinaryTree();
+        tree.root = new Node(1);
+        tree.root.left = new Node(2);
+        tree.root.right = new Node(3);
+        tree.root.left.left = new Node(4);
+        tree.root.left.right = new Node(5);
+        tree.root.right.left = new Node(6);
+        tree.root.right.right = new Node(7);
+        
+        tree.PrintAtLevel(node, level);
+    }
+	
+	public void PrintAtLevel(Node node, int level){
+		PrintAtLevelR(root, 1);
+	}
+	
+	void PrintAtLevelR(Node node, int level){
+		if(node == null){
+			return;
+		}
+		if(level == 1){
+			System.out.println(node.data + " ");
+		}else {
+			PrintAtLevelR(node.left, level-1);
+			PrintAtLevelR(node.right, level+1);
+		}
+		
+	}
+
+
+}

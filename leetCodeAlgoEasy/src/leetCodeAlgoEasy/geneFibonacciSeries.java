@@ -1,5 +1,7 @@
 package leetCodeAlgoEasy;
 
+//This fibonacci series generation is O(n) order of time.
+
 public class geneFibonacciSeries {
 
 	public static void main(String[] args) {

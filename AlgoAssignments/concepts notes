@@ -1,0 +1,3 @@
+A class can have only public or default(no modifier) access specifier. It can be either abstract, final or concrete (normal class). Only Inner classes in Java can be static, not Top level class.
+Covert int to char array.
+char[] digits = Integer.toString(num).toCharArray();

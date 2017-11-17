@@ -1,0 +1,17 @@
+package leetCodeAlgoEasy;
+
+public class majorityElementInArray {
+
+	public static void main(String[] args) {
+		int[] arr = {1,2,3,4};
+		majorityElement(arr);
+
+	}
+    public static int majorityElement(int[] nums) {
+    	int majority = nums.length /2;
+    	System.out.println(majority);
+		return 0;
+        
+    }
+
+}

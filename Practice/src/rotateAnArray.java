@@ -5,19 +5,21 @@
 public class rotateAnArray {
 
 	public static void main(String[] args) {
-		int[] arr = {2,34,6,78};
-		printArray(arr);
+		int[] arr = {1,2,3};
 		rotateArr(arr, 2);
 	}
     //n time rotation
 	private static void rotateArr(int[] arr, int n) {
-		reverseArray(arr, 0, arr.length-1);
+		reverseArray(arr, 0, arr.length-1, n);
 		printArray(arr);
-		reverseArray(arr, n, arr.length-1);
+		reverseArray(arr, 0, n-1,n);
 		printArray(arr);		
 	}
 
-	private static int[] reverseArray(int[] arr, int start,int  end) {
+	private static int[] reverseArray(int[] arr, int start,int  end, int n) {
+		if(arr.length <= n){
+			return arr;
+		}
 		while(start < end){
 			int temp = arr[start];
 			arr[start] = arr[end];

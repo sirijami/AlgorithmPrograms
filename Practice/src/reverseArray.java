@@ -18,32 +18,32 @@ public class reverseArray {
 		System.out.println();		
 	}
     //Iterative way
-	private static int[] reverseArr(int[] arr) {
-		printArray(arr);
-		int i = 0;
-		int j = arr.length-1;
-		while(i < j){
-			int temp = arr[i];
-			arr[i] = arr[j];
-			arr[j] = temp;
-			i++;
-			j--;
-		}
-		return arr;
-	}
-	//Recursive way
-//	private static int[] reverseArr(int[] arr){
-//		return reverseArrRec(arr, 0, arr.length-1);		
-//	}
-//
-//	private static int[] reverseArrRec(int[] arr, int i, int j) {
+//	private static int[] reverseArr(int[] arr) {
+//		printArray(arr);
+//		int i = 0;
+//		int j = arr.length-1;
 //		while(i < j){
 //			int temp = arr[i];
 //			arr[i] = arr[j];
 //			arr[j] = temp;
-//			reverseArrRec(arr, i+1, j-1);	
+//			i++;
+//			j--;
 //		}
 //		return arr;
 //	}
+	//Recursive way
+	private static int[] reverseArr(int[] arr){
+		return reverseArrRec(arr, 0, arr.length-1);		
+	}
+
+	private static int[] reverseArrRec(int[] arr, int i, int j) {
+		if(i < j){
+			int temp = arr[i];
+			arr[i] = arr[j];
+			arr[j] = temp;
+			reverseArrRec(arr, i+1, j-1);	
+		}
+		return arr;
+	}
 
 }

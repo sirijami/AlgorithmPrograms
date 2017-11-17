@@ -1,0 +1,60 @@
+Books to refer:
+java o'riely
+cracking the code
+career cup
+leet code
+java performance: definitive guide: getting the most out of your code.
+
+Key Points:
+Null is special cased inside the print function 
+String builder and string buffer are mutable whereas string is immutable
+Principle operations on String builder are append and insert.
+Append method always adds character at the end of the string whereas insert method inserts at particular location.
+In any reverse questions like reverse a string or elements always travel half way while swapping elements.
+Best way to concatenate a string is using string builder then buffer then concatenate then + operator.
+Deserialization: is the process of restoring state of object from byte stream.
+
+1 byte = 8 bits
+short, char (2 byte - 16 bits)
+int, float (4 byte - 32 bit)
+long, double (8 byte - 64 bit)
+Boolean size is not precisely defined.
+Default value of boolean is false
+
+Marker interface is a interface with no methods
+Synchronization is capability to control the access of multiple threads to shared resources.
+Set Interface --> Does not contain duplicate elements.
+TreeSet Interface---> Elements are in sorted order
+TreeMap -----> Keeps natural ordering of keys
+
+Access Modifier:
+Private : Accessed only by members of same class
+public: Anyone can access
+protected: In same package 
+default: Inherited by super class and can be in different package.
+
+Three variable types:
+local, instance and class variables
+
+Transient variable : It is a variable which may not be serialized during serialization.
+
+Parent of error and exception is  throwable 
+Interfaces can have constants, which are always implicitly public, static, and final. 
+
+Valid char declaration:
+char c1 = 064770; is an octal representation of the integer value 27128,
+ which is legal because it fits into an unsigned 16-bit integer. char c3 = 0xbeef; 
+ is a hexadecimal representation of the integer value 48879, which fits into an unsigned 16-bit integer. 
+ char c6 = '\uface'; is a Unicode representation of a character.
+ 
+ HashTable vs Hashmap:
+ Hashtable does not allow null keys and is synchronized wheareas Hash map allows null key and values and is unsynchronized.
+ 
+ To keep all alphnumeric charachters:
+ [^A-Za-z0-9]
+ String str = s.replaceAll("[^A-Za-z0-9]", "");
+ Convert char array to string:
+ new String(charArrayName)
+ Variable declared as ___final_____ do not occupy memory on a per instance basis.
+ 
+

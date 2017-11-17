@@ -1,0 +1,35 @@
+
+public class Tree {
+	Node root;
+	
+	public Tree(){
+		root = null;
+	}
+
+	public static void main(String[] args) {
+		Tree t = new Tree();
+		t.root = new Node(2);
+        t.root.left = new Node(5);
+        t.root.right = new Node(3);
+        t.root.left.left = new Node(4);
+        t.root.left.right = new Node(5);
+        t.root.right.left = new Node(6);
+        t.root.right.right = new Node(7);
+        t.printNodesKLevel(t.root, 2);
+	}
+	
+	public void printNodesKLevel(Node node, int k){
+		if(node == null){
+			return;
+		}
+		if(k == 0){
+			System.out.println(node.data);
+		}else {
+			printNodesKLevel(node.left, k-1);
+			printNodesKLevel(node.right, k-1);
+		}
+		
+		
+	}
+
+}

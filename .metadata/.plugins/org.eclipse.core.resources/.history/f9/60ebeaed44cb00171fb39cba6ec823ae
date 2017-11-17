@@ -1,0 +1,17 @@
+
+public class BitManipulation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	private static boolean isBitSet(int num, int pos){
+		int mask = 1 << pos;
+		if((mask & num) == 0){
+			return false;
+		}
+		return true;
+		
+	}
+
+}

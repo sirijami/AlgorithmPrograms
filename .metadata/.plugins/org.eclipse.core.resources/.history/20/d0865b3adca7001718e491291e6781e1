@@ -1,0 +1,33 @@
+package leetCodeAlgoEasy;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class numbersDissapearedInArray {
+
+	public static void main(String[] args) {
+		int[] arr = {4,3,2,7,8,2,3,1};
+		System.out.println(findDisappearedNumbers(arr));
+
+	}
+	
+	public static List<Integer> findDisappearedNumbers(int[] nums) {
+		List lst = Arrays.asList(nums);
+		System.out.println(Arrays.deepToString(lst.toArray()));
+		ArrayList<Integer> r = new ArrayList<Integer>();
+		Integer s = 4;
+		System.out.println(s);
+		if(lst.contains(s)){
+			s++;
+			System.out.println(s);
+		}else {
+			r.add(s);
+			s++;
+		}
+	
+		return r;		
+	}
+
+
+}

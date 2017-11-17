@@ -1,0 +1,17 @@
+package leetCodeAlgoEasy;
+
+public class B {
+	 static int count = 100;
+	  public void increment()
+	  {
+	     count++;
+	  }
+	  public static void main(String []args)
+	  {
+	     B b1 = new B();
+	     b1.increment();
+	     B b2 = new B();
+	     System.out.println(b2.count);   // line 13
+	  }
+
+}

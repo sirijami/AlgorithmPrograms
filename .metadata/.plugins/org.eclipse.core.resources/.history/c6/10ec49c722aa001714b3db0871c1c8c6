@@ -1,0 +1,13 @@
+package leetCodeAlgoEasy;
+
+public class B {
+	static int x = 100;              // line 3
+	  int y = 200;                     // line 4 
+	  public static void main(String []args)
+	  {
+	     final int z;                  // line 7
+	     z = x + y;                    // line 8
+	     System.out.println(z);
+	  }
+
+}

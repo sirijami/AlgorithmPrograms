@@ -1,0 +1,26 @@
+package leetCodeAlgoEasy;
+
+public class moveZeroesInPlace {
+
+	public static void main(String[] args) {
+		int[] arr = {0,0,0,2,1,0,23,4,0,0};
+		moveZeroes(arr);
+
+	}
+    public static void moveZeroes(int[] nums) {
+    	int s = 0;
+    	int e = nums.length-1;
+    	int j = s+1;
+    	for(int i = 0 ; i < nums.length; i++){
+    		if( s == 0){
+    			swap (i,j);
+    		}
+    	}
+        
+    }
+	private static void swap(int i, int e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

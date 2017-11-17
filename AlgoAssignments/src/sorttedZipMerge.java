@@ -12,9 +12,7 @@ public class sorttedZipMerge {
 	private static void printArray(int[] result) {
 		for(int i=0; i < result.length; i++){
 			System.out.print(result[i] + " ");
-		}
-
-		
+		}		
 	}
 
 	private static int[] zipMerge(int[] inputArr1, int[] inputArr2) {

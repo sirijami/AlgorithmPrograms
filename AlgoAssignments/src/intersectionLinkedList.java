@@ -1,6 +1,4 @@
 import java.io.ObjectInputStream.GetField;
-
-
 public class intersectionLinkedList {
 	static Node head1, head2;
 	
@@ -26,17 +24,13 @@ public class intersectionLinkedList {
 		ll.head2 = new Node(10);
 		ll.head2.next = new Node(12);
 		ll.head2.next.next = new Node(23);
-		
-		
+				
 		if(ll.getNode() == -1){
 			System.out.println("No intersection existes between both lists");
 		} else {
 			System.out.println("Intersection node is " + ll.getNode());
 		}
-		
-
 	}
-
 	private int getNode() {
 		int list1Length = getLength(head1);
 		int list2length = getLength(head2);

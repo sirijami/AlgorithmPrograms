@@ -1,0 +1,28 @@
+package leetCodeAlgoEasy;
+
+public class mergeSortedArray {
+	public static void main(String[] args) {
+
+		int[] arr1 = {5,9,23,54};
+		int[] arr2 = {1,2,7};
+		merge(arr1,10, arr2, 3);		
+	}
+	
+    private static void printArray(int[] arr) {
+		for(int i = 0; i < arr.length ; i++){
+			System.out.print(arr[i] + " ");
+		}
+		System.out.println();		
+	}
+	public static void merge(int[] A, int m, int[] B, int n) {
+		   int i = m - 1, j = n - 1, k = m + n - 1;
+	        while(i >= 0 && j >= 0) {
+	            A[k--] = A[i] > B[j] ? A[i--] : B[j--];
+	        }
+	        while(j >= 0) {
+	            A[k--] = B[j--];
+	        }
+ 
+    }
+
+}

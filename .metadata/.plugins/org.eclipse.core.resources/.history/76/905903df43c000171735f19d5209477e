@@ -1,0 +1,15 @@
+public class BinaryTree {
+	Node root;
+	public static void main(String[] args)
+    {
+        BinaryTree Btree = new BinaryTree();
+        Btree.root = new Node(1);
+        Btree.root.left = new Node(2);
+        Btree.root.right = new Node(3);
+        Btree.root.left.left = new Node(4);
+        Btree.root.left.right = new Node(5);
+        Btree.root.right.left = new Node(6);
+        Btree.root.right.right = new Node(7);
+    }
+
+}

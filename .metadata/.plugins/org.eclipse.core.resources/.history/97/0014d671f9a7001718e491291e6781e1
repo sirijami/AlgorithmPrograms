@@ -1,0 +1,27 @@
+package leetCodeAlgoEasy;
+
+public class plusOneOfArray {
+
+	public static void main(String[] args) {
+		int[] digits = {9};
+		plusOne(digits);
+
+	}
+    public static int[] plusOne(int[] digits) {
+        for(int i = 0 ; i < digits.length; i++){
+            digits[i] = digits[i] + 1;
+            if(digits[i] > 9){
+                digits[i] = 0;
+            }
+        }
+        printArray(digits);
+        return digits;
+    }
+	private static void printArray(int[] digits) {
+		for(int i= 0;i < digits.length; i++){
+			System.out.println(digits[i] + " ");
+		}
+		System.out.println();		
+	}
+
+}

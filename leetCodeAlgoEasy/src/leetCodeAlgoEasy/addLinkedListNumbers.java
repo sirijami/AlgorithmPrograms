@@ -1,0 +1,44 @@
+package leetCodeAlgoEasy;
+
+public class addLinkedListNumbers {
+	
+	static ListNode l1, l2;
+	static class ListNode{
+		int val;
+		ListNode next;
+
+		public ListNode(int x) {
+			x = val;
+			next = null;
+		}
+	}
+	private static int getLength(ListNode node){
+		int length = 0;
+		while(node != null){
+			length++;
+			node = node.next;
+		}
+		return length;
+	}
+	
+	public static void main(String[] args) {
+		addLinkedListNumbers ll = new addLinkedListNumbers();
+		ll.l1 = new ListNode(2);
+		ll.l1.next = new ListNode(4);
+		ll.l1.next.next = new ListNode(3);
+		
+		ll.l2 = new ListNode(5);
+		ll.l2.next = new ListNode(6);
+		ll.l2.next.next = new ListNode(4);
+		addTwoNumbers(l1, l2);
+			
+	}
+    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    
+		return l2;
+
+
+      
+    }
+
+}
