@@ -1,0 +1,109 @@
+package demo;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+        SingleLinkList numbers = new SingleLinkList();
+        Node head = new Node(10);
+        numbers.addDataHead(head.data);
+        numbers.addDataTail(2);
+        numbers.addDataTail(45);
+        numbers.addDataTail(4);
+        numbers.addDataTail(35);
+        numbers.addDataTail(20);
+        numbers.addDataTail(7);
+        numbers.addDataTail(30);
+
+        numbers.printList();
+        numbers.replaceElementWithGreatestElement(numbers);
+    }
+}
+class Node{
+    public int data;
+    public Node next;
+
+    public Node(){}
+
+    public Node(int data){
+        this.data = data;
+        this.next = null;
+    }
+}
+class SingleLinkList {
+    public Node head;
+    public Node last;
+
+    public void addDataHead(int data){
+        Node add = new Node(data);
+        add.next= head;
+        head = add;
+        last = add;
+    }
+
+    public void addDataTail(int data){
+        Node add = new Node(data);
+
+        if(head == null){
+            head = add;
+            return;
+        }
+        Node temp = head;
+        while(temp.next != null){
+            temp = temp.next;
+        }
+        temp.next = add;
+        last = add;
+    }
+
+    public void printList(){
+        if(head == null)
+            return;
+
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + "->");
+            temp = temp.next;
+        }
+        System.out.println("Null");
+    }
+
+
+    public void reverseList() {
+
+        if(head == null || head.next == null)
+            return;
+
+        Node Back = null;
+        Node Mid = head;
+        Node Front = head.next;
+
+        while(Front != null){
+            Mid.next = Back;
+            Back = Mid;
+            Mid = Front;
+            Front = Front.next;
+        }
+
+        Mid.next = Back;
+        last = head;
+        head = Mid;
+    }
+
+    public void replaceElementWithGreatestElement(SingleLinkList list) {
+        reverseList();
+        int max = list.head.data;
+        Node temp = list.head.next;
+        while (temp != null) {
+            if (max< temp.data) {
+                max = temp.data;
+            }
+            temp.data = max;
+            temp = temp.next;
+        }
+        reverseList();
+        printList();
+    }
+
+}

@@ -1,0 +1,123 @@
+//package demo;
+
+
+public class Link {
+	public Node Head;
+	public Node Last;
+
+	public void ReplaceWithMaxValueTest() {
+		AddDataHead(0);
+		AddDataHead(10);
+		AddDataHead(2);
+		AddDataHead(2);
+		AddDataHead(11);
+		AddDataHead(1);
+		printList();
+		System.out.println();
+		Node test = Head;
+		test = BreakList(Head);
+		printList();
+	}
+
+	public void AddDataHead(int data) {
+		Node add = new Node(data);
+		add.Next = Head;
+		Head = add;
+		Last = add;
+
+	}
+
+	public void addDataTail(int data) {
+		Node add = new Node(data);
+
+		if (Head == null) {
+			Head = add;
+			return;
+		}
+
+		Node temp = Head;
+		while (temp != null) {
+			temp = temp.Next;
+		}
+
+		temp.Next = add;
+		Last = add;
+	}
+
+	public void printList() {
+		if (Head == null)
+			return;
+		Node temp = Head;
+
+
+		while (temp != null) {
+			System.out.print(temp.data + " ");
+			temp = temp.Next;
+		}
+
+	}
+
+
+	public int findMaxValue(Node front) {
+		if (front == null) {
+			System.err.print("null point");
+			return -1;
+		}
+
+		if (front.Next == null) {
+			return front.data;
+		}
+		int max = front.data;
+
+		while (front != null) {
+
+			if (max < front.data) {
+				max = front.data;
+			}
+			front = front.Next;
+		}
+
+		return max;
+
+	}
+
+
+	public Node BreakList(Node front) {
+		if (front == null || front.Next == null) {
+			return front;
+		} else {
+			return ReplaceWithMaxValue(front);
+		}
+	}
+
+	public Node ReplaceWithMaxValue(Node front) {
+		int maxValue = findMaxValue(front);
+		//replacing max value until reach out the position of max value
+		while (front.data != maxValue) {
+			front.data = maxValue;
+			front = front.Next;
+		}
+
+		Node temp = front.Next;// remaining linked list 
+		if (temp == null) {
+			return front;
+		} else {
+			return ReplaceWithMaxValue(temp);
+			// (recursion) Continue with the remaining linked list
+		}
+	}
+
+	public class Node {
+		public int data;
+		public Node Next;
+
+		private Node() {
+		}
+
+		public Node(int data) {
+			this.data = data;
+			this.Next = null;
+		}
+
+	}
+}

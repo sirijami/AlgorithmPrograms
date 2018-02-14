@@ -1,0 +1,35 @@
+package leetCodeAlgoEasy;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class SelfDividingNumber {
+
+	public static void main(String[] args) {
+		selfDividingNumbers(1,22);
+	}
+	
+    public static List<Integer> selfDividingNumbers(int left, int right) {
+        ArrayList<Integer> res = new ArrayList<Integer>(); 
+         for(int i = left ; i <= right ; i++){
+        	 
+        	 String temp = Integer.toString(i);
+        	 System.out.println("temp" + temp);
+        	 
+        	 int[] newGuess = new int[temp.length()];
+        	 if(newGuess.length == 1){
+        		 res.add(i);
+        	 }else {
+        		 for(int j = 0; j < newGuess.length; j++){
+        			 System.out.println("j" + newGuess[j]);
+        			 if( j != 0  && i % newGuess[j] == 0){
+        				 res.add(i);
+        			 }   			 
+        		 }      		 
+        	 }       
+         }
+         System.out.println(res);
+         return res;
+     }
+
+}

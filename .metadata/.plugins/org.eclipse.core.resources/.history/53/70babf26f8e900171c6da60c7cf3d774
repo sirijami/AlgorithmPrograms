@@ -1,0 +1,37 @@
+package leetCodeAlgoEasy;
+
+public class StringCompressionLeetCode {
+
+	public static void main(String[] args) {
+		char[] ch  = {'a','b','a','a','c'};
+		System.out.println(compress(ch));
+
+	}
+	
+	public static int compress(char[] chars) {
+        int indexAns = 0, index = 0;
+        while(index < chars.length){
+            char currentChar = chars[index];
+            int count = 0;
+            while(index < chars.length && chars[index] == currentChar){
+                index++;
+                count++;
+            }
+            chars[indexAns++] = currentChar;
+            if(count != 1)
+                for(char c : Integer.toString(count).toCharArray()) 
+                    chars[indexAns++] = c;
+        }
+        printArray(chars);
+        return indexAns;
+    }
+
+	private static void printArray(char[] chars) {
+		for(int i = 0; i < chars.length;i++){
+			System.out.print(chars[i] + " ");
+		}
+		System.out.println();
+		
+	}
+
+}

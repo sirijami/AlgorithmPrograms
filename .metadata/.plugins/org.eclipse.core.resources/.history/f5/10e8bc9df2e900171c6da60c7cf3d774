@@ -1,0 +1,17 @@
+package leetCodeAlgoEasy;
+
+public class CountAndSayLeetCode {
+
+	public static void main(String[] args) {
+		int n = 4;
+		System.out.println(countAndSay(n));
+		
+
+	}
+    public static String countAndSay(int n) {
+		return null;
+        
+        
+    }
+
+}

@@ -1,0 +1,53 @@
+package leetCodeAlgoEasy;
+
+public class maxAverageSubArray {
+	public static void main(String[] args){
+		int[] nums = {3,3,4,3,0};
+		findMaxAverage(nums, 3);
+	}
+// Sliding window 
+	private static double findMaxAverage(int[] nums, int k) {
+		int sum = 0;
+		for(int i = 0; i < k; i++){
+			sum = sum + nums[i];
+		}
+		int Maxsum = sum;
+		for(int i= 0, j = k; j < nums.length; i++, j++){
+			sum = sum - nums[i] + nums[j] ;
+			Maxsum = Math.max(sum, Maxsum);			
+		}
+		System.out.println(((double) Maxsum /(double) k));
+		return ((double) Maxsum /(double) k);
+		
+	}
+	
+// Time limit exceed as run time is O(n^2)	
+//	public static double findMaxAverage(int[] nums, int k) {
+//        if(nums.length == k){
+//            double avg; double sum = 0;
+//            for(int i = 0; i < nums.length; i++){
+//                sum = sum + nums[i];
+//            }
+//            avg = sum/(double) k;
+//            System.out.println("sbnk" + avg);
+//            return avg;
+//        }
+//	    double avg;
+//	    double maxAvg = Integer.MIN_VALUE;
+//	    for(int i = 0; i < nums.length-3; i++){
+//	    	double sum = 0;
+//	        for(int j = i; j < k + i; j++){
+//	            sum = sum + nums[j];
+//	        }
+//	            avg = sum/(double)k;
+//	            System.out.println(avg);
+//	            if(avg > maxAvg){
+//	                maxAvg = avg;
+//	            }
+//	    }
+//	    return maxAvg;
+//	}
+
+}
+
+

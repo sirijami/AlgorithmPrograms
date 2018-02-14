@@ -1,0 +1,16 @@
+package leetCodeAlgoEasy;
+// Merge sorted array in place and find the kth largest element in the array
+public class MergeSortedArrayInPlace {
+
+	public static void main(String[] args) {
+		int[] arr1
+		
+
+	}
+	
+	public static int mergeSortedArray(int[] arr1, int[] arr2, int k){
+		return k;
+		
+	}
+
+}

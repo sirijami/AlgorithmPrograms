@@ -1,0 +1,84 @@
+package demo;
+
+class Node{
+	public int data;
+	public Node Next;
+	public Node(int data) {
+		this.data=data;
+		this.Next=null;
+	}
+}
+public class As3_linklist {
+	public static void main(String[] args){
+		Node head=new Node(1);
+		Node two=new Node(5);
+		Node three=new Node(15);
+		Node four=new Node(3);
+		Node five=new Node(9);
+		Node six=new Node(7);
+		Node seven=new Node(1);
+		Node eight=new Node(5);
+		head.Next=two;
+		two.Next=three;
+		three.Next=four;
+		four.Next=five;
+		five.Next=six;
+		six.Next=seven;
+		seven.Next=eight;
+		PrintList(head);
+		System.out.println("\n"+"-------origin-----------");
+		Node replace=ReplaceToGreatest(head);
+		PrintList(replace);
+		System.out.println("\n"+"-------after being replaced-----------");
+	}
+	public static void PrintList(Node head) {
+		if(head==null) return;
+		Node tmp=head;
+		while(tmp!=null)
+		{
+			System.out.print(tmp.data+"->");
+			tmp=tmp.Next;
+		}
+		System.out.print("Null");
+	}
+	public static Node reverse(Node head){
+		if(head==null||head.Next==null) return head;
+		Node Back=null;
+		Node Mid=head;
+		Node Front=head.Next;
+		while(Front!=null)
+		{
+			Mid.Next=Back;
+			Back=Mid;
+			Mid=Front;
+			Front=Front.Next;
+		}
+		Mid.Next=Back;
+		head=Mid;
+		return head;
+	}
+	public static Node ReplaceToGreatest(Node head) {
+		if(head==null||head.Next==null) return head;
+		head=reverse(head);
+		int max=head.data;
+		Node dummy=new Node(0);
+		dummy=head;
+		while(head!=null&&head.Next!=null)
+		{
+			head.data=max;
+			if(head.Next.data>=max)
+			{
+				max=head.Next.data;
+				head=head.Next;
+			}
+			else
+			{
+				head=head.Next;
+			}
+		}
+		head.data=max;
+		dummy=reverse(dummy);
+		return dummy;
+	}
+}
+

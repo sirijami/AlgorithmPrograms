@@ -1,0 +1,115 @@
+package demo;
+
+public class Program
+{
+    public static void Main(String[] args)
+    {
+        // Creating the list and print info
+        SingleLinkList list = new SingleLinkList();
+        list.AddDataToHead(16);
+        list.AddDataToTail(17);
+        list.AddDataToTail(4);
+        list.AddDataToTail(3);
+        list.AddDataToTail(5);
+        list.AddDataToTail(2);
+        list.PrintList();
+//        Console.WriteLine();
+        list.ReplaceWithBigger();
+        list.PrintList();
+    }
+}
+
+class Node {
+    public int data;
+    public Node Next;
+    private Node(){}
+    public Node(int data){
+        this.data = data;
+        this.Next = null;
+    }
+}
+
+
+class SingleLinkList {
+    public Node Head;
+    public Node Last;
+
+    public void ReplaceWithBigger() {
+        ReverseList();
+        Node i = Head;
+        int bigger = -1;
+        while (i != null) {
+            if (i == Head || i.data > bigger) {
+                int temp = i.data;
+                i.data = bigger;
+                bigger = temp;
+            }
+            else {
+                i.data = bigger;
+            }
+            i = i.Next;
+        }
+        ReverseList();
+    }
+    public void AddDataToHead(int data) {
+        // Add a temp node with the current Head as Next
+        Node add = new Node(data);
+        add.Next = Head;
+        // Make this the new Head
+        Head = add;
+    }
+    public void AddDataToTail(int data) {
+        Node add = new Node(data);
+
+        if (Head == null) {
+            Head = add;
+            return;
+        }
+        // Start at head and go until the Next is null (end)
+        Node temp = Head;
+        while (temp.Next != null) {
+            temp = temp.Next;
+        }
+        // This is the end of the list, so add the new number to the tail
+        temp.Next = add;
+        Last = add;
+    }
+    public void ReverseList(){
+        if(Head == null || Head.Next == null)
+            return;
+        
+        Node Back = null;
+        Node Mid = Head;
+        Node Front = Head.Next;
+
+        while(Front != null){
+            Mid.Next = Back;
+            Back = Mid;
+            Mid = Front;
+            Front = Front.Next;
+        }
+
+        Mid.Next = Back;
+        Last = Head;
+        Head = Mid;
+
+    }
+    public void PrintList() {
+        if (Head == null)
+            return;
+        
+        Node temp = Head;
+        int limit = 20;
+
+        while(temp != null && limit > 0) {
+            System.out.println(temp.data + " -> ");
+            temp = temp.Next;
+            limit--;
+        }
+        if (limit == 0) {
+        	System.out.println("... (Looping)");
+        } else {
+        	System.out.print("Null");
+        }
+    }
+}

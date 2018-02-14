@@ -1,0 +1,30 @@
+package leetCodeAlgoEasy;
+
+import java.util.List;
+
+public class NumberOfAnagramsInString {
+
+	public static void main(String[] args) {
+		String text = "sdhkdsbk";
+		String pattern = "kd";
+		findAnagrams(text, pattern);
+		
+	}
+    public static List<Integer> findAnagrams(String s, String p) {
+    	int sLength = s.length();
+    	int pLength = p.length();
+    	
+    	char[] sCount = new char[256];
+    	System.out.println(sCoutnt);
+    	char[] pCount = new char[256];
+    	
+    	for(int i = 0; i < sLength; i++){
+    		
+    	}
+		return null;
+       
+       
+    }
+	
+
+}

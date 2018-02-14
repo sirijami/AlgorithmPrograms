@@ -1,0 +1,39 @@
+package leetCodeAlgoEasy;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class MostReoccuringChar {
+
+	public static void main(String[] args) {
+		String str = "vsfhgesfavdh";
+		mrc(str);
+	}
+	public static char mrc(String str){
+		HashMap<Character, Integer> hm = new HashMap<Character, Integer>();
+		int count = 1; int maxcount = Integer.MIN_VALUE; char reoccuringChar;
+		for(int i = 0; i < str.length(); i++){
+			if(hm.containsKey(str.charAt(i))){
+				hm.put(str.charAt(i), hm.get(str.charAt(i)) + 1);
+			}else {
+				hm.put(str.charAt(i), count);
+			}
+		}
+		System.out.println(hm);
+        for(Map.Entry m : hm.entrySet() ){
+        	System.out.println(m);
+//			int hmc = hm.get(str.charAt(m));
+//			if(hmc > maxcount){
+//				maxcount = hmc;
+//			}
+//			reoccuringChar = hm.
+
+        }
+
+
+		System.out.println("maxCount" + maxcount);
+		return 0;
+	}
+
+}

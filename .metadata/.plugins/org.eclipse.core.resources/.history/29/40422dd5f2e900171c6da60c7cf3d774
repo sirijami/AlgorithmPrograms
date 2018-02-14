@@ -1,0 +1,38 @@
+package leetCodeAlgoEasy;
+
+public class CountAndSayLeetCode {
+
+	public static void main(String[] args) {
+		int n = 4;
+		System.out.println(countAndSay(n));
+	}
+	
+    public static String countAndSay(int n) {
+    	StringBuilder curr = new StringBuilder("1");
+    	StringBuilder prev;
+    	int count;
+    	char s;
+    	for(int i = 0; i < n ; i++){
+    		prev = curr;
+    		curr = new StringBuilder();
+    		count = 1;
+    		s = prev.charAt(0);
+    		
+    		for(int j = 1 ; j < prev.length(); j++){
+    			if(prev.charAt(0) != s){
+    				curr.append(count).append(s);
+    				count = 1;
+    				s = prev.charAt(j);
+    			}else {
+    				count++;
+    			}
+    		}
+    		curr.append(count).append(s);
+    	}
+
+		return curr.toString();
+        
+        
+    }
+
+}

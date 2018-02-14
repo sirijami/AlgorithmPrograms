@@ -1,0 +1,38 @@
+package leetCodeAlgoEasy;
+
+public class maxAverageSubArray {
+	public static void main(String[] args){
+		int[] nums = {4,0,4,3,3};
+		findMaxAverage(nums, 4);
+	}
+	
+	
+	public static double findMaxAverage(int[] nums, int k) {
+        if(nums.length == k){
+            double avg; int sum = 0;
+            for(int i = 0; i < nums.length; i++){
+                sum = sum + nums[i];
+            }
+            avg = sum/(double) k;
+            System.out.println("avghashx" + avg);
+            return avg;
+        }
+	    double avg;
+	    double maxAvg = Integer.MIN_VALUE;
+	    for(int i = 0; i < nums.length-3; i++){
+	    	int sum = 0;
+	        for(int j = i; j < k + i; j++){
+	            sum = sum + nums[j];
+	        }
+	            avg = sum/k;
+	            System.out.println(avg);
+	            if(avg > maxAvg){
+	                maxAvg = avg;
+	            }
+	    }
+	    return maxAvg;
+	}
+
+}
+
+

@@ -1,0 +1,63 @@
+package demo;
+
+
+public class NextGreatestElement {
+    public static ListNode nextGreatestElement(ListNode head) {
+        ListNode tail = reverse(head);
+        ListNode iter = tail;
+        int currMax = 0;
+        int prevMax = 0;
+        while (iter != null) {
+            prevMax = currMax;
+            currMax = Math.max(iter.val, prevMax);
+            iter.val = prevMax;
+            iter = iter.next;
+        }
+        return reverse(tail);
+    }
+
+    // 1 -> 2 -> 3 -> null
+    // 3 -> 2 -> 1 -> null
+    // prev  null   1    2
+    // curr   1     2    3
+    // next   2     3   null
+    private static ListNode reverse(ListNode head) {
+        ListNode prev = null, curr = head;
+        while (curr != null) {
+            ListNode next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        System.out.println("prev " + prev);
+        return prev;
+    }
+
+    public static void main(String[] args) {
+        ListNode head = new ListNode(16);
+        ListNode iter = head;
+        iter.next = new ListNode(17);
+        iter = iter.next;
+        iter.next = new ListNode(4);
+        iter = iter.next;
+        iter.next = new ListNode(3);
+        iter = iter.next;
+        iter.next = new ListNode(5);
+        iter = iter.next;
+        iter.next = new ListNode(2);
+        ListNode res = nextGreatestElement(head);
+        while (res != null) {
+            System.out.println(res.val);
+            res = res.next;
+        }
+    }
+
+}
+
+class ListNode {
+    ListNode next;
+    int val;
+    public ListNode(int val) {
+        this.val = val;
+    }
+}

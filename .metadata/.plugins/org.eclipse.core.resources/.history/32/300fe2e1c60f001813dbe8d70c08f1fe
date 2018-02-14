@@ -1,0 +1,53 @@
+package demo;
+
+public static class Node {
+	public int data;
+	public Node Next;
+	
+	public Node() {}
+	public Node(int data) {
+		this.data = data;
+		this.Next = null;
+	}
+}
+
+public class nextGreatElement {
+	
+	public Node nextGreatElement(Node head) {
+    	if (head == null || head.Next == null) {
+    		return head;
+    	}
+    	Node newHead = Reverse(head);
+    	int max = newHead.data;
+    	Node temp = newHead;
+    	while(temp.Next != null) {
+    		int curr = temp.data;
+    		temp.data = max;
+    		max = Math.max(max, curr);
+    		temp = temp.Next;
+    	}
+    	temp.data = max;
+    	return Reverse(newHead);
+    }
+	
+	public Node Reverse(Node node) {
+		if (node == null || node.Next==null) {
+			return node;
+		}
+		
+		Node back = null;
+		Node mid = node;
+		Node front = node.Next;
+		
+		while(front!=null) {
+			mid.Next = back;
+			back = mid;
+			mid = front;
+			front = front.Next;
+	
+		}
+		mid.Next = back;
+		node =mid;
+		return node;
+	}
+}

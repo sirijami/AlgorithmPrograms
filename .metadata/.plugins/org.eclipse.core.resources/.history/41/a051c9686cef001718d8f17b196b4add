@@ -1,0 +1,47 @@
+package leetCodeAlgoEasy;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class PascalsTriangleLeetCode {
+
+	public static void main(String[] args) {
+	int n = 5;
+	generate(n);
+	}
+    public static int generate(int numRows) {
+    	int num = 1;
+    	ArrayList<List<Integer>> outputAl = new ArrayList<List<Integer>>();
+    	ArrayList<Integer> innerAl = new ArrayList<Integer>();
+    	ArrayList<Integer> mAl = new ArrayList<Integer>();
+    	
+    	for(int i = 0; i < numRows ; i++){
+    		for(int j = i; j < i + 1; j++){
+    			if(j == 0){
+    				innerAl.add(num);
+    				outputAl.add(innerAl);
+    			}
+//    			if( j == 1){
+//    				mAl.add(num);
+//    				mAl.add(num);
+//    				innerAl.addAll(mAl);
+//    				outputAl.add(innerAl);
+//    				System.out.println(mAl);
+//    				System.out.println(innerAl);
+//    				System.out.println(outputAl);
+//    			}   			
+//    			int mLength = j + 1;
+//    			for(int m = 0; m < innerAl.size() + 1; m++){ 
+//    				
+//    				
+//    				
+//    				
+//    			}
+    		}
+    	}
+    	
+    	return 0;
+        
+    }
+
+}

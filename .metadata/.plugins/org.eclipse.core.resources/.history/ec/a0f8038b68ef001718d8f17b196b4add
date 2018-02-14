@@ -1,0 +1,16 @@
+package leetCodeAlgoEasy;
+
+public class PascalsTriangleLeetCode {
+
+	public static void main(String[] args) {
+	int n = 5;
+	generate(n);
+
+	}
+    public static List<List<Integer>> generate(int numRows) {
+    	ArrayList<List<Integer>> al = new ArrayList<List<Integer>>();
+    	return al;
+        
+    }
+
+}
