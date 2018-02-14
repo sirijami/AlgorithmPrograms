@@ -1,0 +1,19 @@
+package SearchingAssignmentPackage;
+
+public class ElementExistsinSortedRotatedArray {
+
+	public static void main(String[] args) {
+		int[] arr = {3,5,9,15,2,1,-1};
+		int target = 1;
+		searchElement(arr, target);
+	}
+
+	private static void searchElement(int[] arr, int target) {
+		
+		
+	}
+
+
+	              
+
+}
