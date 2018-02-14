@@ -1,0 +1,23 @@
+package SearchingAssignmentPackage;
+
+public class SubArrayEqualsSum {
+
+	public static void main(String[] args) {
+		int arr[] = {1,1,2,7,-2,6,4};
+		Boolean val = isSubArrayEqualsSum(arr, 5);
+		System.out.println("the val is "+ val);
+
+	}
+
+	private static Boolean isSubArrayEqualsSum (int[] arr, int givenSum) {
+		
+		for(int i = 0; i < arr.length; i++){
+			for
+		}
+		
+		return null;
+		
+		
+	}
+
+}

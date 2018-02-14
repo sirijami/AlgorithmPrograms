@@ -1,0 +1,38 @@
+package SearchingAssignmentPackage;
+
+public class SubArrayEqualsSum {
+
+	public static void main(String[] args) {
+		int arr[] = {1,1,2,7,-2,6,4};
+		Boolean val = isSubArrayEqualsSum(arr, 5);
+		System.out.println("the val is "+ val);
+
+	}
+
+	private static Boolean isSubArrayEqualsSum (int[] arr, int givenSum) {
+		/* To check if the givenSum element exits in the array as it counts as an sub-array too */
+		for(int i = 0; i < arr.length; i++){
+			if(arr[i] == givenSum){
+				System.out.println("The element is equals to given sum");
+				return true;
+			}
+		}
+		
+		/* Find the sub arrays and check whether the given sum is equals the sum of sub-array */
+		int current_sum ;
+		for(int i = 0; i < arr.length; i++){
+			current_sum = arr[i];
+			for(int j = i + 1 ; j <= arr.length; j++){
+				if(current_sum == givenSum){
+					return true;
+				}
+				if(current_sum > givenSum || current_sum == arr.length){
+					break;
+				}
+				current_sum = current_sum + arr[j];				
+			}
+		}		
+		return false;				
+	}
+
+}
