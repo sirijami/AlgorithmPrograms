@@ -1,5 +1,7 @@
 package Assignment3;
 
+import java.awt.List;
+
 /* Write a function to replace every element with it's next greatest element in a Single linked list */
 class Node{
 	int val;
