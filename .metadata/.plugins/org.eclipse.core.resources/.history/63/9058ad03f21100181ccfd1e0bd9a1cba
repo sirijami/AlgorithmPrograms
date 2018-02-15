@@ -1,0 +1,16 @@
+package Assignment3;
+
+public class SortArrayInWave {
+
+	public static void main(String[] args) {
+		int [] arr = {10, 5, 6, 3, 2, 20, 100, 80};
+		sortArray(arr);
+
+	}
+
+	private static void sortArray(int[] arr) {
+		
+		
+	}
+
+}
