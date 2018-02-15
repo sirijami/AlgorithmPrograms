@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/AlgorithmAssignmentsSpring-2018/src/SearchingAssignmentPackage/SubArrayEqualsSum.java"/>
+<listEntry value="/AlgorithmAssignmentsSpring-2018/src/Assignment4SearchingAssignment/SubArrayEqualsSum.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
-<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="SearchingAssignmentPackage.SubArrayEqualsSum"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="Assignment4SearchingAssignment.SubArrayEqualsSum"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="AlgorithmAssignmentsSpring-2018"/>
 </launchConfiguration>
