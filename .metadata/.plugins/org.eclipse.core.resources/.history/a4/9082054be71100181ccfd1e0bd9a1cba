@@ -1,0 +1,56 @@
+package Assignment3;
+
+/* Write a function to replace every element with it's next greatest element in a Single linked list */
+class Node{
+	int val;
+	Node next;
+	
+	Node(int i){
+		this.val = i;
+		next = null;		
+	}
+}
+
+public class ReplaceWithNextGreatestElement {
+	Node head;
+
+	public static void main(String[] args) {
+		ReplaceWithNextGreatestElement list = new ReplaceWithNextGreatestElement();
+		list.head = new Node(3);
+		Node second = new Node(5);
+		Node third = new Node(-3);
+		Node fourth = new Node(15);
+		Node fifth = new Node(7);
+		
+		list.head.next = second;
+		second.next = third;
+		third.next = fourth;
+		fourth.next = fifth;
+		fifth.next = null;
+		
+		System.out.println("Original list");
+		list.printlist();	/* 3 -> 5 -> -3 -> 15 -> 7 -> null */
+		list.findNextGreatestElement();
+	}
+
+
+	private void printlist() {
+		if(head == null){
+			return;
+		}
+		Node p = head;
+		while(p.next != null){
+			System.out.print(p.val + " -> ");
+			p = p.next;
+		}
+		System.out.print(p.val + " -> null");
+		
+	}
+	
+	public void findNextGreatestElement(){
+		
+	}
+
+}
+
+

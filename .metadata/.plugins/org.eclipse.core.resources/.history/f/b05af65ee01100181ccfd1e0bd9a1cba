@@ -1,0 +1,10 @@
+package Assignment3;
+/* Write a function to replace every element with it's next greatest element in a Single linked list */
+public class ReplaceWithNextGreatestElement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
