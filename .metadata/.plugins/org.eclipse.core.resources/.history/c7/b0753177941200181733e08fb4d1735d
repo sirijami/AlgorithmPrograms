@@ -1,0 +1,9 @@
+package SingleLinkedList;
+
+public class SingleLinkedList {
+	Node head;
+        SingleLinkedList list = new SingleLinkedList();
+        list.head = new Node(1);
+        
+
+}

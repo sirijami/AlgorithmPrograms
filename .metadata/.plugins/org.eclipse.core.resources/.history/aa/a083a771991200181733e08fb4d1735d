@@ -1,0 +1,56 @@
+package SingleLinkedList;
+
+public class SingleLinkedList {
+	Node head;
+	
+	public void printList() {
+		if(head == null){
+			System.out.println("Emplty List");
+			return ;
+		}
+		Node p = head;
+		while(p.next != null){
+			System.out.print(p.data + " -> ");
+			p = p.next;
+		}
+		System.out.println(p.data + " -> null");		
+	}
+	
+	public int countNodes(){
+		int count = 0;
+		if(head == null){
+			System.out.println("Emplty List");
+			return count;
+		}
+		Node p = head;
+		while(p != null){
+			count++;
+			p = p.next;
+		}
+		return count;
+	}
+	
+	/* Return the middle element of the linked list */
+	public int findMiddleElementInLinkedList(){
+		Node slow_pt = head;
+		Node fast_pt = head;
+		
+		if(head == null){
+			System.out.println("Emplty List");
+			return -1;			
+		}else if (countNodes() == 1){
+			return head.data;
+		}else {
+			while(fast_pt != null && fast_pt.next != null){
+				slow_pt = slow_pt.next;
+				fast_pt = fast_pt.next.next;
+			}			
+		}
+
+		return slow_pt.data;
+	}
+	
+
+        
+
+}

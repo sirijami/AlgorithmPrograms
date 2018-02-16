@@ -1,0 +1,26 @@
+package ArrayInterviewQuestions;
+
+/* Keep track of first smallest and second smallest on the same traversl
+ * Time complexity: O(n)*/
+
+public class findSecondSmallest {
+
+	public static void main(String[] args) {
+		int[] arr = {12, 13, 1, 10, 34, 1};
+		System.out.println("Second smallest element in the array is " + findSecondSmallestElement(arr) );
+	}
+	public static int findSecondSmallestElement(int[] arr){
+		int first_smallest = Integer.MAX_VALUE , second_smallest = Integer.MAX_VALUE;
+		for(int i = 0; i < arr.length; i++){
+			if(arr[i] < first_smallest){
+				second_smallest = first_smallest;
+				first_smallest = arr[i];
+
+			}else if (arr[i] < second_smallest){			
+				second_smallest = arr[i];
+			}
+		}
+		return second_smallest;
+	}
+
+}

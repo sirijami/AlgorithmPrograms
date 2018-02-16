@@ -1,0 +1,13 @@
+package ArrayInterviewQuestions;
+
+/* Keep track of first smallest and second smallest on the same traversl
+ * Time complexity: O(n)*/
+
+public class findSecondSmallest {
+
+	public static void main(String[] args) {
+		int[] arr = {12, 13, 1, 10, 34, 1};
+		System.out.println("Second smallest element in the array is " + findSecondSmallestElement(arr) );
+	}
+
+}

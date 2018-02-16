@@ -193,7 +193,7 @@ public class SingleLinkedList {
 		if(p.link == null){
 			System.out.println("no element found");
 		}else {
-		p.link = p.link.link;
+		    p.link = p.link.link;
 		}
 	}
 	
