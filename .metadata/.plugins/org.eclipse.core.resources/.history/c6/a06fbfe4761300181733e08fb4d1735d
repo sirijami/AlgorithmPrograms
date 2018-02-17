@@ -1,0 +1,15 @@
+package ArrayInterviewQuestions;
+
+public class KthLargestElement {
+
+	public static void main(String[] args) {
+		int[] arr = {12, 13, 1, 10, 34, 1};
+		System.out.println("Second largest element in the array is " + findkthLargestElement(arr, 3) );
+	}
+
+	private static String findkthLargestElement(int[] arr, int i) {
+		
+		return null;
+	}
+
+}

@@ -33,7 +33,12 @@ public class Demo {
 //        list.removeDuplicates();
 //        list.printList();
         
-          list.plusOne();
+//          list.plusOne();
+          
+//		list.rotateList();
+		
+	     list.addLinkedList();
+		
 
 
 	}

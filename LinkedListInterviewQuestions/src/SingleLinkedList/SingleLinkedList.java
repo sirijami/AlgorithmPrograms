@@ -1,7 +1,7 @@
 package SingleLinkedList;
 
 public class SingleLinkedList {
-	Node head;
+	Node head; 
 	
 	public void printList() {
 		if(head == null){
@@ -187,6 +187,71 @@ public class SingleLinkedList {
 		return curr;
 		
 	}
+	
+	public void rotateList(){
+		Node res = rotateList(head, 3);
+		printList(res);
+	}
+	
+	/*Rotate a single linked list
+	 * Traverse till the end of the list and determine len - k % len
+	 * traverse till len - k % len and pass the next element of len- k% len */
+	
+	public Node rotateList(Node head, int k){
+		if(head == null || head.next == null || k == 0){
+			return head;
+		}
+		Node index = head;
+		int len = 1;
+		while(index.next != null){
+			len++;
+			index = index.next;
+		}
+		System.out.println("length " + len);
+		index.next = head;
+		for(int i = 0; i < len - k % len ; i++){
+			index = index.next;
+		}
+
+		Node res = index.next;
+		index.next = null;		
+		return res;
+
+		
+	}
+	
+	public void addLinkedList(){
+		Node res = addLinkedList(head, head);
+		printList(res);
+		
+	}
+	
+		
+    public Node addLinkedList(Node l1, Node l2){
+    	Node dummy = new Node(0);
+         Node p = dummy;
+         int carry = 0;
+         while(l1 != null || l2 != null || carry != 0){
+             if(l1 != null){
+                 carry = carry + l1.data;
+                 l1 = l1.next;
+             }
+             if(l2 != null){
+                 carry = carry + l2.data;
+                 l2 = l2.next;
+             }
+              dummy.next = new Node(carry % 10);
+              carry = carry / 10;
+              dummy = dummy.next;          
+         }
+         return p.next;
+
+    	
+    }
+	
+	
+	
+
 	
 	
 	
