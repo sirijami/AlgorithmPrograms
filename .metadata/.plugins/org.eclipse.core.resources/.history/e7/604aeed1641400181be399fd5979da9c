@@ -1,0 +1,16 @@
+package ArrayInterviewQuestions;
+
+import java.util.HashMap;
+import java.util.Map.Entry;
+
+
+public class ConsecutiveNumbers {
+
+	public static void main(String[] args) {
+		int[] arr = {9,9,1,1,1,2,2,2,9,9,3,5,5,7,8};
+		
+		
+
+	}
+
+}

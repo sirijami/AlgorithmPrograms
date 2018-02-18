@@ -41,9 +41,13 @@
 <fullyQualifiedTypeName name="QueueArray.QueueA"/>
 <fullyQualifiedTypeName name="java.io.Console"/>
 <fullyQualifiedTypeName name="java.lang.IncompatibleClassChangeError"/>
-<fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="Assignment3.ReplaceWithNextGreatestElement"/>
 <fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="SingleLinkedList.SingleLinkedList"/>
+<fullyQualifiedTypeName name="SingleLinkedList.FindMiddleElementInLinkedList"/>
+<fullyQualifiedTypeName name="java.lang.NoClassDefFoundError"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="org.xml.sax.HandlerBase"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
 </qualifiedTypeNameHistroy>

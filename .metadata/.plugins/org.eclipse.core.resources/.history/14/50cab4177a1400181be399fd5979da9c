@@ -1,0 +1,20 @@
+package ArrayInterviewQuestions;
+
+public class FindMaxElementInRotatedArray {
+
+	public static void main(String[] args) {
+		int[] arr = {8, 10, 20, 80, 100, 200, 400, 500,3};
+		findMaxElement(arr);
+	}
+	
+	private static void findMaxElement(int[] num){
+		for(int i = 0; i < num.length; i++){
+			if(num[i] > num[i+1] && i != num.length){
+				System.out.println("The peak element is " + num[i]);
+				break;
+			}
+		}
+		
+	}
+
+}

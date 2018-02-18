@@ -1,5 +1,6 @@
 package ArrayInterviewQuestions;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map.Entry;
 
@@ -7,21 +8,20 @@ import java.util.Map.Entry;
 public class ConsecutiveNumbers {
 
 	public static void main(String[] args) {
-		int[] arr = {1,1,1,2,2,2,3,5,5,7,8};
-		HashMap<Integer, Integer> hm = new HashMap<Integer, Integer>();
-		for(int i = 0 ; i < arr.length; i++){
-			if(hm.containsKey(arr[i])){
-				hm.put(arr[i], hm.get(arr[i]) + 1);
-			}else{
-				hm.put(arr[i], 1);
+		int[] arr = {9,1,2,2,2,9,8,8};
+		int count = 1;
+		ArrayList<Integer> result = new ArrayList<Integer>();		
+		for(int i = 0; i < arr.length;i++ ){
+			if( i != arr.length-1 && arr[i] == arr[i+1]){
+				count++;
+			}else{			
+				result.add(count);
+				result.add(arr[i]);
+				System.out.println(result);
+				count = 1;
 			}
-		}
-		System.out.println(hm);
-		
-		for( Entry<Integer, Integer> s : hm.entrySet()){
-			System.out.print(s.getValue() + ""+  s.getKey());
-		}
-
+		}		
+        System.out.println(result);
 	}
 
 }

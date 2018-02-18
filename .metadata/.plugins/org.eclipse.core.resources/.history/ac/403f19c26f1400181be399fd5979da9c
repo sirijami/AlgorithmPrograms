@@ -1,0 +1,44 @@
+package ArrayInterviewQuestions;
+
+public class mergeSortedArrays {
+
+	public static void main(String[] args) {
+//		int[] arr1 = {34,64,89,200,500};
+//		int[] arr2 = {2,25,37,78,150};
+		int[] arr1 = {1,5};
+		int[] arr2 ={2,3};
+		int[] mergedSortedArray = mergeArray(arr1, arr2);
+		printArray(mergedSortedArray);
+	}
+	
+	private static int[] mergeArray(int[] nums1, int[] nums2){
+		int[] result = new int[nums1.length + nums2.length];
+		int i = 0;
+		int j = 0;
+		for(int m = 0; m < result.length; m++){
+			if(i != nums1.length && nums1[i] < nums2[j]){
+				result[m] = nums1[i];
+				i++;
+			}else if(j != nums2.length && nums2[j] < nums1[i]) {
+				result[m] = nums2[j];
+				j++;
+			}
+			for(int n1 : nums1){
+				result[m] = n1;
+			}
+			for(int n2 : nums2){
+				result[m] = n2;
+			}
+		}		
+		return result;
+		
+	}
+	
+	private static void printArray(int[] arr){
+		for(int i = 0; i < arr.length; i++){
+			System.out.print(arr[i] + " ");
+		}
+		System.out.println();
+	}
+
+}

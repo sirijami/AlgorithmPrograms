@@ -1,0 +1,34 @@
+package ArrayInterviewQuestions;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map.Entry;
+
+
+public class ConsecutiveNumbers {
+
+	public static void main(String[] args) {
+		int[] arr = {9,1,2,9,8};
+		int first_pt = 0;
+		int second_pt = 1;
+		int count = 1;
+		ArrayList<Integer> result = new ArrayList<Integer>();
+        while(second_pt < arr.length){
+            System.out.println(second_pt);
+			if(arr[first_pt] == arr[second_pt]){
+//				first_pt++;
+//				second_pt++;
+				count++;				
+			}else{			
+				result.add(count);
+				result.add(arr[first_pt]);
+				count = 1;
+			}
+			first_pt++;
+			second_pt++;			
+        } 
+
+        System.out.println(result);
+	}
+
+}

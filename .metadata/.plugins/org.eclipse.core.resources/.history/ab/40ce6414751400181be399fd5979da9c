@@ -1,0 +1,17 @@
+package ArrayInterviewQuestions;
+
+public class multiplyAllExceptTheCurrNum {
+
+	public static void main(String[] args) {
+		int[] arr1 = {2,5,7,9};
+        
+	}
+	
+	private static void printArray(int[] arr){
+		for(int i = 0; i < arr.length; i++){
+			System.out.print(arr[i] + " ");
+		}
+		System.out.println();
+	}
+
+}
